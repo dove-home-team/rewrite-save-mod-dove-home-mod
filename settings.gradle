@@ -10,3 +10,5 @@ pluginManagement {
 include("common")
 include("fabric")
 include("forge")
+include("bakalib/common")
+project(":bakalib/common").name = "bakalib-common"
