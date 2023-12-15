@@ -1,0 +1,42 @@
+.gradle
+**/build/
+!src/**/build/
+src/main/gen
+
+*.log
+
+# idea ignored
+.idea/
+
+dataOut/libraries/
+dataOut/logs/
+dataOut/versions/
+dataOut/world/
+dataOut/*.json
+dataOut/*.txt
+dataOut/*.jar
+dataOut/*.properties
+dataOut/generated/.cache/
+dataOut/generated/assets/
+dataOut/generated/data/
+
+# m7t ignored
+run/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
