@@ -14,12 +14,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.dovehome.dovehomemod.fabric.DovehomemodFabric"
+      "io.github.dovehomemod.bakalib.fabric.BakaLibFabric"
     ]
   },
   "mixins": [
-    "dovehomemod.mixins.json",
-    "dovehomemod-common.mixins.json"
+    "bakalib.mixins.json",
+    "bakalib-common.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.2",
