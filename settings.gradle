@@ -11,4 +11,8 @@ include("common")
 include("fabric")
 include("forge")
 include("bakalib/common")
+include("bakalib/fabric")
+include("bakalib/forge")
 project(":bakalib/common").name = "bakalib-common"
+project(":bakalib/fabric").name = "bakalib-fabric"
+project(":bakalib/forge").name = "bakalib-forge"
