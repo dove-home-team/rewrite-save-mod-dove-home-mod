@@ -42,6 +42,21 @@ allprojects {
             name = 'ParchmentMC'
             url = 'https://maven.parchmentmc.org'
         }
+        maven {
+            url = rootProject.file("rootmaven")
+        }
+        maven { url "https://maven.shedaniel.me/" }
+        maven {
+            url = 'https://www.cursemaven.com'
+            content {
+                includeGroup "curse.maven"
+            }
+        }
+        maven {
+
+            name = "Resourceful Bees Maven"
+            url = "https://nexus.resourcefulbees.com/repository/maven-public/"
+        }
     }
 
     tasks.withType(JavaCompile) {
@@ -59,6 +74,7 @@ def names = [ "bakalib" ]
 for (final def name in names ) {
     project(":$name-common") {
         archivesBaseName = "$name"
+        version = getProperty("${name}_version")
         loom {
 
             def path = file("src/main/resources/${archivesBaseName}.accesswidener")
@@ -82,13 +98,15 @@ for (final def name in names ) {
         publishing {
             publications {
                 mavenCommon(MavenPublication) {
-                    artifactId = rootProject.archives_base_name
+                    artifactId =  project.name + "-" + minecraft_version
                     from components.java
                 }
             }
 
             repositories {
-
+                maven {
+                    url rootProject.file("rootmaven")
+                }
             }
         }
     }
@@ -96,6 +114,7 @@ for (final def name in names ) {
         apply plugin: "com.github.johnrengelman.shadow"
 
         archivesBaseName = "$name"
+        version = getProperty("${name}_version")
 
         loom {
 
@@ -166,7 +185,7 @@ for (final def name in names ) {
         publishing {
             publications {
                 mavenFabric(MavenPublication) {
-                    artifactId = rootProject.archives_base_name + "-" + project.name
+                    artifactId =  project.name + "-" + minecraft_version
                     from components.java
                 }
             }
@@ -186,6 +205,7 @@ for (final def name in names ) {
         apply plugin: "com.github.johnrengelman.shadow"
 
         archivesBaseName = "$name"
+        version = getProperty("${name}_version")
 
         architectury {
             platformSetupLoomIde()
@@ -279,7 +299,7 @@ for (final def name in names ) {
         publishing {
             publications {
                 mavenForge(MavenPublication) {
-                    artifactId = rootProject.archives_base_name + "-" + project.name
+                    artifactId =  project.name + "-" + minecraft_version
                     from components.java
                 }
             }

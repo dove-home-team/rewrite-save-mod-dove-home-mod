@@ -23,6 +23,10 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+
+    modImplementation(include("io.github.dovehome:bakalib-fabric-${minecraft_version}:${last_bakalib_version}"))
+    modImplementation(include("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-${minecraft_version}:${resourceful_config_version}"))
+
 }
 
 processResources {

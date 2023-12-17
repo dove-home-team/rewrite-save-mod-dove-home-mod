@@ -4,6 +4,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     // Remove the next line if you don't want to depend on the API
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
+    modImplementation("io.github.dovehome:bakalib-common-${minecraft_version}:${last_bakalib_version}")
+    modImplementation(include("com.teamresourceful.resourcefulconfig:resourcefulconfig-common-${minecraft_version}:${resourceful_config_version}"))
 }
 
 architectury {

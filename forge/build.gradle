@@ -21,6 +21,9 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+    modImplementation(include("io.github.dovehome:bakalib-forge-${minecraft_version}:${last_bakalib_version}"))
+    modImplementation "com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-${minecraft_version}:${resourceful_config_version}"
+
 }
 
 processResources {
