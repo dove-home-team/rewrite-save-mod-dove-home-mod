@@ -31,6 +31,7 @@ public class Dovehomemod
 		for (ModItems value : ModItems.values()) {
 			value.register(items);
 		}
+		blocks.register();
 		items.register();
 	}
 }
