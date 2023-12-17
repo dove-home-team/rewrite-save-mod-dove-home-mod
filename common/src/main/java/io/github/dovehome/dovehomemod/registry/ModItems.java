@@ -4,6 +4,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.baka4n.bakalib.RegistryT;
 import io.github.dovehome.dovehomemod.Dovehomemod;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
 import java.util.Locale;
@@ -11,7 +12,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public enum ModItems implements RegistryT<Item> {
-    test(Item::new);
+    test(Item::new),
+    test_block(properties -> new BlockItem(ModBlocks.test_block.get(), properties));
     private final Supplier<Item> item;
     private RegistrySupplier<Item> registryItem;
 
