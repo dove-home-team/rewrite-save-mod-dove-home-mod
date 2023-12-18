@@ -34,7 +34,8 @@ public class RemoveAllRecipe {
                        ResourceManager resourceManager,
                        ProfilerFiller profiler,
                        CallbackInfo ci) {
-        String[] split = DoveConfig.deleteAllRecipe.split(",");
+
+        String[] split = DoveConfig.deleteAllRecipe.replace("[", "").replace("]", "").split(",");
         object.entrySet().removeIf(entry ->
                 dove_home_mod$remove(entry, split));
     }

@@ -11,5 +11,6 @@ public class BakaLibForge {
 		// Submit our event bus to let architectury register our content on the right time
         EventBuses.registerModEventBus(BakaLib.modid, FMLJavaModLoadingContext.get().getModEventBus());
             BakaLib.init();
+
     }
 }

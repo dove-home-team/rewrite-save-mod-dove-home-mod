@@ -7,12 +7,15 @@ pluginManagement {
     }
 }
 
-include("common")
-include("fabric")
-include("forge")
+include("dovehomemod/common")
+include("dovehomemod/fabric")
+include("dovehomemod/forge")
 include("bakalib/common")
 include("bakalib/fabric")
 include("bakalib/forge")
 project(":bakalib/common").name = "bakalib-common"
 project(":bakalib/fabric").name = "bakalib-fabric"
 project(":bakalib/forge").name = "bakalib-forge"
+project(":dovehomemod/common").name = "dovehomemod-common"
+project(":dovehomemod/fabric").name = "dovehomemod-fabric"
+project(":dovehomemod/forge").name = "dovehomemod-forge"

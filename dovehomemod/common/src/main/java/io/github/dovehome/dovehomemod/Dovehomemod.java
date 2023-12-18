@@ -24,6 +24,7 @@ public class Dovehomemod
 	public static final Configurator configs = new Configurator();
 
 	public static void init() {
+
 		configs.registerConfig(DoveConfig.class);
 		for (ModBlocks value : ModBlocks.values()) {
 			value.register(blocks);

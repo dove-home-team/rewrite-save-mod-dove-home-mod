@@ -6,6 +6,8 @@ import com.teamresourceful.resourcefulconfig.common.config.EntryType;
 import com.teamresourceful.resourcefulconfig.web.annotations.WebInfo;
 import io.github.dovehome.dovehomemod.Dovehomemod;
 
+import java.util.Arrays;
+
 @Config(Dovehomemod.MOD_ID)
 @WebInfo(
         title = Dovehomemod.MOD_ID,
@@ -18,7 +20,11 @@ public class DoveConfig {
             type = EntryType.STRING,
             translation = "dove.home.mod.delete.all.recipe"
     )
-    public static String deleteAllRecipe = "%s,kubejs,crafttweaker".formatted(Dovehomemod.MOD_ID);
+    public static String deleteAllRecipe = Arrays.toString(new String[] {
+            Dovehomemod.MOD_ID,
+            "kubejs",
+            "crafttweaker"
+    });
     @ConfigEntry(
             id = "noInfiniteWater",
             type = EntryType.BOOLEAN,
