@@ -35,10 +35,10 @@ public class Dovehomemod
 		for (ModBlocks value : ModBlocks.values()) {
 			value.register(blocks);
 		}
+		blocks.register();
 		for (ModItems value : ModItems.values()) {
 			value.register(items);
 		}
-		blocks.register();
 		items.register();
 	}
 
