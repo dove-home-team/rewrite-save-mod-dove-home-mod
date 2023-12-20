@@ -33,10 +33,15 @@ allprojects {
             }
         }
         maven {
+            name = "modmenu"
+            url = "https://maven.terraformersmc.com/releases/"
+        }
+        maven {
 
             name = "Resourceful Bees Maven"
             url = "https://nexus.resourcefulbees.com/repository/maven-public/"
         }
+
     }
 
     tasks.withType(JavaCompile) {

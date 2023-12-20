@@ -15,6 +15,9 @@
   "entrypoints": {
     "main": [
       "io.github.dovehome.dovehomemod.fabric.DovehomemodFabric"
+    ],
+    "modmenu": [
+      "io.github.dovehome.dovehomemod.fabric.config.DoveConfigFabric"
     ]
   },
   "mixins": [
