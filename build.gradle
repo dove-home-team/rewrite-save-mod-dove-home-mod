@@ -25,10 +25,6 @@ allprojects {
         maven {
             url = rootProject.file("rootmaven")
         }
-        maven {
-            name = "Fuzs Mod Resources"
-            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
-        }
         maven { url "https://maven.shedaniel.me/" }
         maven {
             url = 'https://www.cursemaven.com'
