@@ -3,19 +3,16 @@ package io.github.dovehome.dovehomemod;
 import com.teamresourceful.resourcefulconfig.client.ConfigScreen;
 import com.teamresourceful.resourcefulconfig.common.config.Configurator;
 import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
-import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
+import io.github.dovehome.dovehomemod.datagen.DatagenBus;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModItems;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-
-import java.util.function.BiFunction;
 
 public class Dovehomemod
 {
@@ -31,7 +28,7 @@ public class Dovehomemod
 	public static final Configurator configs = new Configurator();
 
 	public static void init() {
-		configs.registerConfig(DoveConfig.class);
+
 		for (ModBlocks value : ModBlocks.values()) {
 			value.register(blocks);
 		}
@@ -40,6 +37,13 @@ public class Dovehomemod
 			value.register(items);
 		}
 		items.register();
+	}
+
+	public static void preInit() {
+		try {
+			Class.forName(DatagenBus.class.getName());
+		} catch (ClassNotFoundException ignored) {}
+		configs.registerConfig(DoveConfig.class);
 	}
 
 	public static ConfigScreen registerConfig(Screen parent) {

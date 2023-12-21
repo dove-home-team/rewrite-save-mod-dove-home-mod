@@ -11,9 +11,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(Dovehomemod.MOD_ID)
 public class DovehomemodForge {
     public DovehomemodForge() {
-		// Submit our event bus to let architectury register our content on the right time
+		Dovehomemod.preInit();
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> DoveConfigForge::init);
+        // Submit our event bus to let architectury register our content on the right time
         EventBuses.registerModEventBus(Dovehomemod.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         Dovehomemod.init();
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> DoveConfigForge::init);
+
     }
 }

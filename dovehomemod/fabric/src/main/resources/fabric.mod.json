@@ -13,6 +13,9 @@
 
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      ""
+    ],
     "main": [
       "io.github.dovehome.dovehomemod.fabric.DovehomemodFabric"
     ],

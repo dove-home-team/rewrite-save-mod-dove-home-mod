@@ -70,6 +70,8 @@ subprojects {
     }
 }
 
+import net.fabricmc.loom.configuration.FabricApiExtension
+
 def names = [ "bakalib", "dovehomemod" ]
 
 for (final def name in names ) {
@@ -124,6 +126,22 @@ for (final def name in names ) {
                 accessWidenerPath = path
             }
 
+        }
+
+
+
+        fabricApi {
+            configureDataGeneration((FabricApiExtension.DataGenerationSettings settings) -> {
+                settings.modId = name
+            })
+        }
+
+        sourceSets {
+            main {
+                resources {
+                    srcDirs += file("src/main/generated").absolutePath
+                }
+            }
         }
 
         architectury {
@@ -224,7 +242,7 @@ for (final def name in names ) {
                     convertAccessWideners.set(true)
                 }
                 runs {
-                    create("dataGen") {
+                    datagen {
                         data()
                         programArgs("--all", "--mod", "$name")
                         programArgs("--output", file("src/main/generated/resources").absolutePath)
