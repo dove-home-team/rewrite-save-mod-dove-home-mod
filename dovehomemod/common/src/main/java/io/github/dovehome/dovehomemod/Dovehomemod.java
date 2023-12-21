@@ -40,9 +40,6 @@ public class Dovehomemod
 	}
 
 	public static void preInit() {
-		try {
-			Class.forName(DatagenBus.class.getName());
-		} catch (ClassNotFoundException ignored) {}
 		configs.registerConfig(DoveConfig.class);
 	}
 

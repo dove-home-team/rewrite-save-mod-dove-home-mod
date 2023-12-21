@@ -2,4 +2,5 @@ dependencies {
     modImplementation(include("io.github.dovehome:bakalib-fabric-${minecraft_version}:${last_bakalib_version}"))
     modImplementation(include("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-${minecraft_version}:${resourceful_config_version}"))
     modApi("com.terraformersmc:modmenu:${modmenu_version}")
+    modImplementation "net.minecraftforge:forgeconfigapiport-fabric:4.2.11"
 }

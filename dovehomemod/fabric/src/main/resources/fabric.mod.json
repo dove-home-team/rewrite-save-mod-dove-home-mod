@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "dovehomemod",
   "version": "${version}",
-
   "name": "dovehomemod",
   "description": "",
   "authors": [],
@@ -13,9 +12,6 @@
 
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      ""
-    ],
     "main": [
       "io.github.dovehome.dovehomemod.fabric.DovehomemodFabric"
     ],

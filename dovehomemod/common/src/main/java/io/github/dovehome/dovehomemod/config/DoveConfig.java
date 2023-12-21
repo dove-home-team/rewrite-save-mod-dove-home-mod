@@ -14,7 +14,7 @@ import java.util.Arrays;
 @WebInfo(
         title = Dovehomemod.MOD_ID,
         description = "Dove home mod config.",
-        icon = Dovehomemod.MOD_ID,
+        icon = "icon.png",
         gradient = @Gradient(value = "45deg", first = "#c2e59c", second = "#64b3f4"),
         links = {
                 @Link(value = "https://github.com/dove-home-team", icon = "github", title = "Home Page"),

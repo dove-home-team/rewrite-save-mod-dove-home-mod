@@ -25,6 +25,10 @@ allprojects {
         maven {
             url = rootProject.file("rootmaven")
         }
+        maven {
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
         maven { url "https://maven.shedaniel.me/" }
         maven {
             url = 'https://www.cursemaven.com'
@@ -128,22 +132,6 @@ for (final def name in names ) {
 
         }
 
-
-
-        fabricApi {
-            configureDataGeneration((FabricApiExtension.DataGenerationSettings settings) -> {
-                settings.modId = name
-            })
-        }
-
-        sourceSets {
-            main {
-                resources {
-                    srcDirs += file("src/main/generated").absolutePath
-                }
-            }
-        }
-
         architectury {
             platformSetupLoomIde()
             fabric()
@@ -240,13 +228,6 @@ for (final def name in names ) {
                 mixinConfig "${name}.mixins.json", "${name}-common.mixins.json"
                 if (path != null) {
                     convertAccessWideners.set(true)
-                }
-                runs {
-                    datagen {
-                        data()
-                        programArgs("--all", "--mod", "$name")
-                        programArgs("--output", file("src/main/generated/resources").absolutePath)
-                    }
                 }
             }
 
