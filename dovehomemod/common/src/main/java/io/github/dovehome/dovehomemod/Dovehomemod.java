@@ -27,6 +27,12 @@ public class Dovehomemod
 
 	public static final Configurator configs = new Configurator();
 
+
+
+	public static void preInit() {
+		configs.registerConfig(DoveConfig.class);
+	}
+
 	public static void init() {
 
 		for (ModBlocks value : ModBlocks.values()) {
@@ -37,10 +43,6 @@ public class Dovehomemod
 			value.register(items);
 		}
 		items.register();
-	}
-
-	public static void preInit() {
-		configs.registerConfig(DoveConfig.class);
 	}
 
 	public static ConfigScreen registerConfig(Screen parent) {
