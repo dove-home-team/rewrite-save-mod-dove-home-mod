@@ -15,7 +15,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public enum ModBlocks implements RegistryT<Block> {
-    test_block(Block::new, Material.STONE);
+    ;
     private final Supplier<Block> block;
     private RegistrySupplier<Block> registryBlock;
 

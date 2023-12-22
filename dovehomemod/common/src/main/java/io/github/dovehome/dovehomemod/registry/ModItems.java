@@ -13,8 +13,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public enum ModItems implements RegistryT<Item> {
-    test(Item::new),
-    test_block(properties -> new BlockItem(ModBlocks.test_block.get(), properties));
+    ;
     private final Supplier<Item> item;
     private RegistrySupplier<Item> registryItem;
 
