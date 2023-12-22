@@ -11,7 +11,9 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.dovehome.dovehomemod.fabric.DovehomemodFabric"
+      "io.github.dovehome.dovehomemod.fabric.DovehomemodFabric",
+      "io.github.dovehome.dovehomemod.Dovehomemod::preInit"
+
     ],
     "modmenu": [
       "io.github.dovehome.dovehomemod.fabric.config.DoveConfigFabric"

@@ -6,7 +6,6 @@ import net.fabricmc.api.ModInitializer;
 public class DovehomemodFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        Dovehomemod.preInit();
         Dovehomemod.init();
     }
 }

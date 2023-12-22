@@ -1,4 +1,4 @@
 dependencies {
     modImplementation("io.github.dovehome:bakalib-common-${minecraft_version}:${last_bakalib_version}")
-    modImplementation(include("com.teamresourceful.resourcefulconfig:resourcefulconfig-common-${minecraft_version}:${resourceful_config_version}"))
+    modApi("com.teamresourceful.resourcefulconfig:resourcefulconfig-common-${minecraft_version}:${resourceful_config_version}")
 }

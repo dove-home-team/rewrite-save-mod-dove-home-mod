@@ -36,7 +36,7 @@ public final class DoveConfig {
     @ConfigEntry(
             id = "noInfiniteWater",
             type = EntryType.BOOLEAN,
-            translation = "dove.home.mod.no.infinite.write"
+            translation = "dove.home.mod.no.infinite.water"
     )
     public static boolean noInfiniteWater = true;
 }

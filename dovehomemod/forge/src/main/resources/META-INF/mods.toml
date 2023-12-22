@@ -81,6 +81,6 @@ side="BOTH"
 [[dependencies.dovehomemod]]
 modId = "resourcefulconfig"
 mandatory = true
-versionRange = "[1.2.0,)"
+versionRange = "[1.0.20,)"
 ordering = "NONE"
 side = "BOTH"

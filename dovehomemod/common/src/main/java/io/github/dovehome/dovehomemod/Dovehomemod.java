@@ -5,7 +5,6 @@ import com.teamresourceful.resourcefulconfig.common.config.Configurator;
 import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
-import io.github.dovehome.dovehomemod.datagen.DatagenBus;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModItems;
 import net.minecraft.client.gui.screens.Screen;
@@ -47,6 +46,7 @@ public class Dovehomemod
 
 	public static ConfigScreen registerConfig(Screen parent) {
 		ResourcefulConfig config = Dovehomemod.configs.getConfig(DoveConfig.class);
+
 		if (config == null) {
 			return null;
 		}
