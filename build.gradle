@@ -86,6 +86,15 @@ for (final def name in names ) {
             }
         }
 
+        sourceSets {
+            main {
+                resources {
+                    srcDirs += project(":$name-forge").file("src/main/generated/resources").absolutePath
+                    exclude ".cache"
+                }
+            }
+        }
+
         dependencies {
 
             // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
@@ -225,17 +234,16 @@ for (final def name in names ) {
                 if (path != null) {
                     convertAccessWideners.set(true)
                 }
-            }
-
-        }
-
-        sourceSets {
-            main {
-                resources {
-                    srcDirs += file("src/main/generated/resources").absolutePath
-                    exclude ".cache"
+                runs {
+                    datagen {
+                        data()
+                        programArgs("--all", "--mod", "dovehomemod")
+                        programArgs("--output", file("src/main/generated/resources").absolutePath)
+                    }
                 }
+
             }
+
         }
 
         configurations {

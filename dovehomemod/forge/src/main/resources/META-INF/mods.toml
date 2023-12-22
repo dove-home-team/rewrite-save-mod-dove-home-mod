@@ -78,3 +78,9 @@ mandatory=true
 versionRange="[6.5.85,)"
 ordering="NONE"
 side="BOTH"
+[[dependencies.dovehomemod]]
+modId = "resourcefulconfig"
+mandatory = true
+versionRange = "[1.2.0,)"
+ordering = "NONE"
+side = "BOTH"

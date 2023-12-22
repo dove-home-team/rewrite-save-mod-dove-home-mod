@@ -25,6 +25,10 @@
   ],
   "depends": {
     "fabricloader": ">=0.15.2",
-    "minecraft": ">=1.19.2"
+    "fabric": ">=0.77.0",
+    "minecraft": ">=1.19.2",
+    "resourcefulconfig": ">=1.2.0",
+    "architectury": ">=6.5.85",
+    "bakalib": ">=1.0.0.0-a2"
   }
 }
