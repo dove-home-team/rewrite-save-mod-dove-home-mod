@@ -70,8 +70,6 @@ subprojects {
     }
 }
 
-import net.fabricmc.loom.configuration.FabricApiExtension
-
 def names = [ "bakalib", "dovehomemod", "dovecore" ]
 
 for (final def name in names ) {
