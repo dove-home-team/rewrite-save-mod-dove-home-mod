@@ -5,10 +5,13 @@
 
   "name": "baka4n lib",
   "description": "",
-  "authors": [],
+  "authors": [
+    "baka4n",
+    "dove home mod team"
+  ],
   "contact": {},
 
-  "license": "MIT",
+  "license": "${license_type}",
   "icon": "icon.png",
 
   "environment": "*",

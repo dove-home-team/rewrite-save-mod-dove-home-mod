@@ -172,11 +172,13 @@ for (final def name in names ) {
             inputs.property "version", project.version
             inputs.property "modid", name
             inputs.property "display_name", project.name
+            inputs.property "license_type", license_type
 
             filesMatching("fabric.mod.json") {
                 expand "version": project.version,
                         "modid": name,
-                        "display_name": project.name
+                        "display_name": project.name,
+                        "license_type": license_type
             }
         }
 
@@ -288,11 +290,13 @@ for (final def name in names ) {
             inputs.property "version", project.version
             inputs.property "modid", name
             inputs.property "display_name", project.name
+            inputs.property "license_type", license_type
 
             filesMatching("META-INF/mods.toml") {
                 expand "version": project.version,
                         "modid": name,
-                        "display_name": project.name
+                        "display_name": project.name,
+                        "license_type": license_type
             }
         }
 

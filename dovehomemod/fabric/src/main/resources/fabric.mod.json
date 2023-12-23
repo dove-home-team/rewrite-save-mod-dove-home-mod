@@ -4,9 +4,12 @@
   "version": "${version}",
   "name": "${display_name}",
   "description": "",
-  "authors": [],
+  "authors": [
+    "baka4n",
+    "dove home mod team"
+  ],
   "contact": {},
-  "license": "MIT",
+  "license": "${license_type}",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
