@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "dovehomemod",
+  "id": "${modid}",
   "version": "${version}",
-  "name": "dovehomemod",
+  "name": "${display_name}",
   "description": "",
   "authors": [],
   "contact": {},

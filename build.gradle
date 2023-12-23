@@ -170,9 +170,13 @@ for (final def name in names ) {
 
         processResources {
             inputs.property "version", project.version
+            inputs.property "modid", name
+            inputs.property "display_name", project.name
 
             filesMatching("fabric.mod.json") {
-                expand "version": project.version
+                expand "version": project.version,
+                        "modid": name,
+                        "display_name": project.name
             }
         }
 
@@ -282,9 +286,13 @@ for (final def name in names ) {
 
         processResources {
             inputs.property "version", project.version
+            inputs.property "modid", name
+            inputs.property "display_name", project.name
 
             filesMatching("META-INF/mods.toml") {
-                expand "version": project.version
+                expand "version": project.version,
+                        "modid": name,
+                        "display_name": project.name
             }
         }
 

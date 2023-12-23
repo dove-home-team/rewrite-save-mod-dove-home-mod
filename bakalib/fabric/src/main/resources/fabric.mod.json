@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "bakalib",
+  "id": "${modid}",
   "version": "${version}",
 
-  "name": "bakalib",
+  "name": "baka4n lib",
   "description": "",
   "authors": [],
   "contact": {},
