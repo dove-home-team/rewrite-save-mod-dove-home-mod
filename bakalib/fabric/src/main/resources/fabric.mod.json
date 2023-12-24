@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "io.github.dovehomemod.bakalib.fabric.BakaLibFabric"
+    ],
+    "client": [
+      "io.github.dovehomemod.bakalib.fabric.BakalibClientFabric"
     ]
   },
   "mixins": [

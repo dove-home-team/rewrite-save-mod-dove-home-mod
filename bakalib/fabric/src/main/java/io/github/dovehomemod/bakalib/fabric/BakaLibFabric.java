@@ -7,5 +7,6 @@ public class BakaLibFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         BakaLib.init();
+
     }
 }

@@ -2,6 +2,7 @@ package io.github.dovehomemod.bakalib.forge;
 
 import dev.architectury.platform.forge.EventBuses;
 import io.github.dovehomemod.bakalib.BakaLib;
+import net.minecraftforge.client.model.obj.ObjModel;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -11,6 +12,7 @@ public class BakaLibForge {
 		// Submit our event bus to let architectury register our content on the right time
         EventBuses.registerModEventBus(BakaLib.modid, FMLJavaModLoadingContext.get().getModEventBus());
             BakaLib.init();
+
 
     }
 }
