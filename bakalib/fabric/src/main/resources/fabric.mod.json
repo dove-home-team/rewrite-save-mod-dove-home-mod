@@ -20,11 +20,13 @@
       "io.github.dovehomemod.bakalib.fabric.BakaLibFabric"
     ],
     "client": [
-      "io.github.dovehomemod.bakalib.fabric.BakalibClientFabric"
+      "io.github.dovehomemod.bakalib.fabric.BakalibClientFabric",
+      "dev.monarkhes.myron.impl.client.MyronClient"
     ]
   },
   "mixins": [
     "bakalib.mixins.json",
+    "myron.mixins.json",
     "bakalib-common.mixins.json"
   ],
   "depends": {
