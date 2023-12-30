@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "${modid}",
+  "version": "${version}",
+
+  "name": "baka4n lib",
+  "description": "",
+  "authors": [
+    "baka4n",
+    "dove home mod team"
+  ],
+  "contact": {},
+
+  "license": "${license_type}",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "preLaunch": [
+      "io.github.dovehome.dovecore.DoveCoreFabric"
+    ]
+  },
+  "mixins": [
+    "dovecore.mixins.json",
+    "dovecore-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.2",
+    "minecraft": ">=1.19.2"
+  }
+}

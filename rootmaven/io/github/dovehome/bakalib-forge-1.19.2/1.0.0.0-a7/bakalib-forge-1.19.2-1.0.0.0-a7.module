@@ -1,0 +1,98 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.dovehome",
+    "module": "bakalib-forge-1.19.2",
+    "version": "1.0.0.0-a7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "dev.architectury",
+          "module": "architectury-forge",
+          "version": {
+            "requires": "6.5.85"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bakalib-forge-1.19.2-1.0.0.0-a7.jar",
+          "url": "bakalib-forge-1.19.2-1.0.0.0-a7.jar",
+          "size": 10296,
+          "sha512": "58901d30e03dab2927765905c64d47b117d772528a107e4b5b7ad09a311ed45d8bf4cb929063f716279b3ff4652db2255fc1b6b6f2e9e5e6f086146f1366dc47",
+          "sha256": "fc7c0b09c1c36155bf7aa067892456e7381f43111c0c85bd0bf825a397aa5849",
+          "sha1": "db4ff1a1ead6a02ad1cfc036957d2081793ca71f",
+          "md5": "41afcba4cfd7cb5830d2daa1e7622ee2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "dev.architectury",
+          "module": "architectury-forge",
+          "version": {
+            "requires": "6.5.85"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bakalib-forge-1.19.2-1.0.0.0-a7.jar",
+          "url": "bakalib-forge-1.19.2-1.0.0.0-a7.jar",
+          "size": 10296,
+          "sha512": "58901d30e03dab2927765905c64d47b117d772528a107e4b5b7ad09a311ed45d8bf4cb929063f716279b3ff4652db2255fc1b6b6f2e9e5e6f086146f1366dc47",
+          "sha256": "fc7c0b09c1c36155bf7aa067892456e7381f43111c0c85bd0bf825a397aa5849",
+          "sha1": "db4ff1a1ead6a02ad1cfc036957d2081793ca71f",
+          "md5": "41afcba4cfd7cb5830d2daa1e7622ee2"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bakalib-forge-1.19.2-1.0.0.0-a7-sources.jar",
+          "url": "bakalib-forge-1.19.2-1.0.0.0-a7-sources.jar",
+          "size": 8561,
+          "sha512": "fbc72f3c4c760c8e1711937cf6de771d9715ead673763518e4f594ad6ba8c97aad12a4f4c55b570955bf9f16c8a7867bea8b1811d3d847a0e6f82da5bfd8174b",
+          "sha256": "931fe44e533c49660d9458faa826eb193fe7dff6e46bf4bfab6e9df3547dd6f6",
+          "sha1": "8ef97afc0b418d790e16f70f2d2be28ab78779be",
+          "md5": "bdcc0c622f7acd675db53ea1565b97d1"
+        }
+      ]
+    }
+  ]
+}

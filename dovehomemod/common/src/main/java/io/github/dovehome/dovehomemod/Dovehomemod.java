@@ -8,6 +8,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
 import io.github.dovehome.dovehomemod.registry.ModBlockEntities;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
+import io.github.dovehome.dovehomemod.registry.ModCreativeTabs;
 import io.github.dovehome.dovehomemod.registry.ModItems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Registry;
@@ -41,6 +42,7 @@ public class Dovehomemod
 		ClientLifecycleEvent.CLIENT_SETUP.register(instance -> {
 			ObjFabricOnly.client();
 		});
+		ModCreativeTabs.init();
 		for (ModBlockEntities value : ModBlockEntities.values()) {
 			value.register(blockEntities);
 		}
