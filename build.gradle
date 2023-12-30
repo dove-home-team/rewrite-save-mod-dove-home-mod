@@ -70,7 +70,11 @@ subprojects {
     }
 }
 
-def names = [ "bakalib", "dovehomemod", "dovecore" ]
+def names = [
+        "bakalib"
+        , "dovehomemod"
+        , "dovecore"
+]
 
 for (final def name in names ) {
     project(":$name-common") {
