@@ -7,9 +7,6 @@
     "NoInfiniteWater",
     "RemoveAllRecipe"
   ],
-  "client": [
-    "BakedModelMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
   }

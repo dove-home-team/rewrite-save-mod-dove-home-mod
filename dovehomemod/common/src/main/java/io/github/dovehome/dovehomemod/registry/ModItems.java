@@ -4,6 +4,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.github.baka4n.bakalib.RegistryT;
 import io.github.dovehome.dovehomemod.Dovehomemod;
+import io.github.dovehome.dovehomemod.primarily.item.CactusThornsBlockItem;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -13,7 +14,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public enum ModItems implements RegistryT<Item> {
-    ;
+    cactus_thorns(properties -> new CactusThornsBlockItem(ModCreativeTabs.step1.get()));
     private final Supplier<Item> item;
     private RegistrySupplier<Item> registryItem;
 

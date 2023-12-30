@@ -135,14 +135,6 @@ for (final def name in names ) {
 
         }
 
-        sourceSets {
-            main {
-                resources {
-                    srcDirs += rootProject.file("src/main/fabric")
-                }
-            }
-        }
-
         architectury {
             platformSetupLoomIde()
             fabric()
@@ -224,7 +216,6 @@ for (final def name in names ) {
         }
 
     }
-
     project(":$name-forge") {
         apply plugin: "com.github.johnrengelman.shadow"
 
@@ -256,14 +247,6 @@ for (final def name in names ) {
 
             }
 
-        }
-
-        sourceSets {
-            main {
-                resources {
-                    srcDirs += rootProject.file("src/main/forge")
-                }
-            }
         }
 
         configurations {
@@ -343,5 +326,12 @@ for (final def name in names ) {
             }
         }
     }
+     task "${name}_publish"(dependsOn: [
+            project("$name-common").tasks.getByName("publish"),
+            project("$name-fabric").tasks.getByName("publish"),
+            project("$name-forge").tasks.getByName("publish")
+    ],
+     group: "publish") {}
+
 
 }

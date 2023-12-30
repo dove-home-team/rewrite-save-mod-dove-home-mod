@@ -6,6 +6,7 @@ import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
+import io.github.dovehome.dovehomemod.registry.ModBlockEntities;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModItems;
 import net.minecraft.client.gui.screens.Screen;
@@ -13,6 +14,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import org.jetbrains.annotations.Nullable;
 
 public class Dovehomemod
@@ -21,6 +23,7 @@ public class Dovehomemod
 
 	public static final DeferredRegister<Item> items = DeferredRegister.create(Dovehomemod.MOD_ID, Registry.ITEM_REGISTRY);
 	public static final DeferredRegister<Block> blocks = DeferredRegister.create(Dovehomemod.MOD_ID, Registry.BLOCK_REGISTRY);
+	public static final DeferredRegister<BlockEntityType<?>> blockEntities = DeferredRegister.create(Dovehomemod.MOD_ID, Registry.BLOCK_ENTITY_TYPE_REGISTRY);
 
 	public static ResourceLocation id(String path) {
 		return new ResourceLocation(MOD_ID, path);
@@ -38,6 +41,10 @@ public class Dovehomemod
 		ClientLifecycleEvent.CLIENT_SETUP.register(instance -> {
 			ObjFabricOnly.client();
 		});
+		for (ModBlockEntities value : ModBlockEntities.values()) {
+			value.register(blockEntities);
+		}
+		blockEntities.register();
 		for (ModBlocks value : ModBlocks.values()) {
 			value.register(blocks);
 		}

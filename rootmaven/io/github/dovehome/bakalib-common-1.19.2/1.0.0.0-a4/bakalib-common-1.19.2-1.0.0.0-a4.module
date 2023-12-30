@@ -1,0 +1,105 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.dovehome",
+    "module": "bakalib-common-1.19.2",
+    "version": "1.0.0.0-a4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "dev.architectury",
+          "module": "architectury",
+          "version": {
+            "requires": "6.5.85"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bakalib-common-1.19.2-1.0.0.0-a4.jar",
+          "url": "bakalib-common-1.19.2-1.0.0.0-a4.jar",
+          "size": 6465,
+          "sha512": "601ec8c75ad6f7b68b9dda0323e04c07fd8249495d7d8fdce4dd338abcc5e210856496de818cf6d1871f4250cc06fd8c2c575893494d2e596a20e12e4131004a",
+          "sha256": "abb56de4c95b43755eab0dfa372edd86581da6228e34e3187208c0db8c42cb8d",
+          "sha1": "6dea57e5d21422c663555be856ddc1f5c5224d2f",
+          "md5": "b30606d649fc25085fba8e93d36da3f0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "dev.architectury",
+          "module": "architectury",
+          "version": {
+            "requires": "6.5.85"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.15.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bakalib-common-1.19.2-1.0.0.0-a4.jar",
+          "url": "bakalib-common-1.19.2-1.0.0.0-a4.jar",
+          "size": 6465,
+          "sha512": "601ec8c75ad6f7b68b9dda0323e04c07fd8249495d7d8fdce4dd338abcc5e210856496de818cf6d1871f4250cc06fd8c2c575893494d2e596a20e12e4131004a",
+          "sha256": "abb56de4c95b43755eab0dfa372edd86581da6228e34e3187208c0db8c42cb8d",
+          "sha1": "6dea57e5d21422c663555be856ddc1f5c5224d2f",
+          "md5": "b30606d649fc25085fba8e93d36da3f0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bakalib-common-1.19.2-1.0.0.0-a4-sources.jar",
+          "url": "bakalib-common-1.19.2-1.0.0.0-a4-sources.jar",
+          "size": 4998,
+          "sha512": "78f53ee5c7e6083937938ba01a78961ca4396cabc04637311ae213f9d877f83ea3e406a2e2b9baa9e2cdac93c7889cf633bb6507bb58ab3f4e3b98cd01a609a2",
+          "sha256": "226483db55c4246386eae6c7dc701cdc7b159c49ebe9bb384ff4abf36c206930",
+          "sha1": "9c2b9cdd269321a7b9db620078eb0f2240bdbdb8",
+          "md5": "07676b0142808133ab3c99f7fdd4ea10"
+        }
+      ]
+    }
+  ]
+}

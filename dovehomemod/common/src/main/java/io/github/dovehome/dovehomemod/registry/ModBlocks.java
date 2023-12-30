@@ -7,6 +7,7 @@ import io.github.dovehome.dovehomemod.Dovehomemod;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CactusBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 
@@ -15,6 +16,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public enum ModBlocks implements RegistryT<Block> {
+    cactus_thorns(CactusBlock::new, Material.CACTUS),
     ;
     private final Supplier<Block> block;
     private RegistrySupplier<Block> registryBlock;

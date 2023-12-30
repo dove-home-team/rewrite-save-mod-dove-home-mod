@@ -2,6 +2,7 @@ package io.github.dovehome.dovehomemod.config;
 
 import com.teamresourceful.resourcefulconfig.common.annotations.Config;
 import com.teamresourceful.resourcefulconfig.common.annotations.ConfigEntry;
+import com.teamresourceful.resourcefulconfig.common.annotations.InlineCategory;
 import com.teamresourceful.resourcefulconfig.common.config.EntryType;
 import com.teamresourceful.resourcefulconfig.web.annotations.Gradient;
 import com.teamresourceful.resourcefulconfig.web.annotations.Link;
@@ -46,4 +47,7 @@ public final class DoveConfig {
             translation = "dove.home.mod.is.void.nether"
     )
     public static boolean isVoidNether = true;
+
+    @InlineCategory
+    public static SettingsConfig settingsConfig;
 }
