@@ -1,5 +1,6 @@
 package io.github.dovehome.dovehomemod.fabric;
 
+import dev.felnull.specialmodelloader.api.event.SpecialModelLoaderEvents;
 import io.github.dovehome.dovehomemod.Dovehomemod;
 import net.fabricmc.api.ModInitializer;
 

@@ -39,4 +39,11 @@ public final class DoveConfig {
             translation = "dove.home.mod.no.infinite.water"
     )
     public static boolean noInfiniteWater = true;
+
+    @ConfigEntry(
+            id = "isVoidNether",
+            type = EntryType.BOOLEAN,
+            translation = "dove.home.mod.is.void.nether"
+    )
+    public static boolean isVoidNether = true;
 }
