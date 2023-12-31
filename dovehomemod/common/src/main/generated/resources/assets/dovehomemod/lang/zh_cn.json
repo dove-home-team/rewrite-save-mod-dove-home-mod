@@ -1,0 +1,11 @@
+{
+  "block.dovehomemod.cactus_thorns": "仙人掌刺",
+  "blood.count": "染血量：",
+  "cactus.bloody": "染血的：",
+  "dove.home.mod.cactus.thorns.max.blood": "仙人掌刺最大含血量",
+  "dove.home.mod.delete.all.recipe": "移除非列表配方",
+  "dove.home.mod.no.infinite.water": "禁用无限水",
+  "dove.home.mod.settings.category": "设置类",
+  "dove.home.mod.vanilla.edit.category": "原版修改类",
+  "itemGroup.dovehomemod.step1": "一阶段"
+}

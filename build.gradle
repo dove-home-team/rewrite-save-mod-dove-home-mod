@@ -91,7 +91,7 @@ for (final def name in names ) {
         sourceSets {
             main {
                 resources {
-                    srcDirs += project(":$name-forge").file("src/main/generated/resources").absolutePath
+                    srcDirs += file("src/main/generated/resources").absolutePath
                     exclude ".cache"
                 }
             }
@@ -245,7 +245,7 @@ for (final def name in names ) {
                     datagen {
                         data()
                         programArgs("--all", "--mod", "${name}")
-                        programArgs("--output", file("src/main/generated/resources").absolutePath)
+                        programArgs("--output", project(":$name-common").file("src/main/generated/resources").absolutePath)
                     }
                 }
 
