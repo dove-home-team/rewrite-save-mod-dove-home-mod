@@ -253,6 +253,12 @@ for (final def name in names ) {
 
         }
 
+        sourceSets {
+            main {
+                java.srcDirs += rootProject.file("$name/common/src/main/datagen")
+            }
+        }
+
         configurations {
             common
             shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.

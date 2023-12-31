@@ -1,7 +1,6 @@
-package io.github.dovehome.dovehomemod.forge;
+package io.github.dovehome.dovehomemod.datagen;
 
 import io.github.dovehome.dovehomemod.Dovehomemod;
-import io.github.dovehome.dovehomemod.datagen.DoveLangProvider;
 import io.github.dovehome.dovehomemod.primarily.item.CactusThornsBlockItem;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModCreativeTabs;
@@ -10,6 +9,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+@SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = Dovehomemod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DovehomemodDatagen {
     @SubscribeEvent
