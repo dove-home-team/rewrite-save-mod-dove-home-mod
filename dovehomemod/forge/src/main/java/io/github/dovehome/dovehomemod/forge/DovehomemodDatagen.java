@@ -19,8 +19,12 @@ public class DovehomemodDatagen {
         generator.addProvider(event.includeClient(), new DoveLangProvider(generator, "en_us") {
             @Override
             protected void addTranslations() {
+                add(vanilla_edit_category, "Vanilla edit category");
                 add(delete_recipe, "Exclude recipes");
-                add(no_infinite_water, "no inf-water");
+                add(no_infinite_water, "No inf-water");
+                add(setting_category, "Setting category");
+                add(cactus_thorns_max_blood, "Cactus thorns max blood");
+
                 add(CactusThornsBlockItem.bloodCount, "blood staining amount is ");
                 add(CactusThornsBlockItem.bloody, "bloody ");
                 add(ModCreativeTabs.step1.get().getDisplayName(), "step1");

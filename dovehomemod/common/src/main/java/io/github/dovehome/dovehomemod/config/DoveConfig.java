@@ -24,29 +24,8 @@ import java.util.Arrays;
 )
 public final class DoveConfig {
 
-    @ConfigEntry(
-            id = "deleteAllRecipe",
-            type = EntryType.STRING,
-            translation = "dove.home.mod.delete.all.recipe"
-    )
-    public static String deleteAllRecipe = Arrays.toString(new String[] {
-            Dovehomemod.MOD_ID,
-            "kubejs",
-            "crafttweaker"
-    });
-    @ConfigEntry(
-            id = "noInfiniteWater",
-            type = EntryType.BOOLEAN,
-            translation = "dove.home.mod.no.infinite.water"
-    )
-    public static boolean noInfiniteWater = true;
-
-    @ConfigEntry(
-            id = "isVoidNether",
-            type = EntryType.BOOLEAN,
-            translation = "dove.home.mod.is.void.nether"
-    )
-    public static boolean isVoidNether = true;
+    @InlineCategory
+    public static VanillaEditConfig vanillaEditConfig;
 
     @InlineCategory
     public static SettingsConfig settingsConfig;

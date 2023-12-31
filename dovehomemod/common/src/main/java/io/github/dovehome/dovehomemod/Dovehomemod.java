@@ -6,6 +6,7 @@ import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
+import io.github.dovehome.dovehomemod.config.SettingsConfig;
 import io.github.dovehome.dovehomemod.registry.ModBlockEntities;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModCreativeTabs;
@@ -59,18 +60,9 @@ public class Dovehomemod
 
 	public static ConfigScreen registerConfig(Screen parent) {
 		ResourcefulConfig config = Dovehomemod.configs.getConfig(DoveConfig.class);
-
 		if (config == null) {
 			return null;
 		}
-		return new ConfigScreen(null, config);
-	}
-	public static ConfigScreen registerConfigParent(ConfigScreen parent) {
-		ResourcefulConfig config = Dovehomemod.configs.getConfig(DoveConfig.class);
-
-		if (config == null) {
-			return null;
-		}
-		return new ConfigScreen(parent, config);
+        return new ConfigScreen(null, config);
 	}
 }

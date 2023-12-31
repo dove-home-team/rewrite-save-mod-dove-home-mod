@@ -1,5 +1,6 @@
 package io.github.dovehome.dovehomemod.config;
 
+import com.teamresourceful.resourcefulconfig.common.annotations.Category;
 import com.teamresourceful.resourcefulconfig.common.annotations.Config;
 import com.teamresourceful.resourcefulconfig.common.annotations.ConfigEntry;
 import com.teamresourceful.resourcefulconfig.common.config.EntryType;
@@ -7,14 +8,11 @@ import com.teamresourceful.resourcefulconfig.web.annotations.Gradient;
 import com.teamresourceful.resourcefulconfig.web.annotations.WebInfo;
 import io.github.dovehome.dovehomemod.Dovehomemod;
 
-@Config(Dovehomemod.MOD_ID + "_settings_config")
+@Category(id = Dovehomemod.MOD_ID + "_settings_config", translation = "dove.home.mod.settings.category")
 @WebInfo(
-        title = Dovehomemod.MOD_ID + "_settings_config",
-        description = "This is block or item settings config",
-        icon = "box",
-        gradient = @Gradient(value = "45deg", first = "#c2e59c", second = "#64b3f4")
+        icon = "flame"
 )
-public class SettingsConfig {
+public final class SettingsConfig {
     @ConfigEntry(
             id = "cactus_thorns_max_blood",
             type = EntryType.INTEGER,

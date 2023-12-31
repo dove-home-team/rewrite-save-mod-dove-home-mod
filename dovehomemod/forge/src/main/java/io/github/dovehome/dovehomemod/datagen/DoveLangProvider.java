@@ -21,14 +21,22 @@ public class DoveLangProvider extends LanguageProvider {
     }
     public final String delete_recipe = "dove.home.mod.delete.all.recipe";
     public final String no_infinite_water = "dove.home.mod.no.infinite.water";
+    public final String setting_category = "dove.home.mod.settings.category";
+    public final String cactus_thorns_max_blood = "dove.home.mod.cactus.thorns.max.blood";
+    public final String vanilla_edit_category = "dove.home.mod.vanilla.edit.category";
     @Override
     protected void addTranslations() {
+        add(vanilla_edit_category, "原版修改类");
         add(delete_recipe, "移除非列表配方");
         add(no_infinite_water, "禁用无限水");
+        add(setting_category, "设置类");
+        add(cactus_thorns_max_blood, "仙人掌刺最大含血量");
+
         add(CactusThornsBlockItem.bloodCount, "染血量：");
         add(CactusThornsBlockItem.bloody, "染血的：");
         add(ModCreativeTabs.step1.get().getDisplayName(), "一阶段");
         add(ModBlocks.cactus_thorns.get(), "仙人掌刺");
+
     }
 
     protected void add(CreativeModeTab tab, String translate) {

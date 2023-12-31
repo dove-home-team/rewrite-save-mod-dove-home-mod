@@ -3,6 +3,7 @@ package io.github.dovehome.dovehomemod.mixin.forge;
 import com.google.gson.JsonElement;
 import io.github.dovehome.dovehomemod.Dovehomemod;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
+import io.github.dovehome.dovehomemod.config.VanillaEditConfig;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.profiling.ProfilerFiller;
@@ -35,7 +36,7 @@ public class RemoveAllRecipe {
                        ProfilerFiller profiler,
                        CallbackInfo ci) {
 
-        String[] split = DoveConfig.deleteAllRecipe.replace("[", "").replace("]", "").split(",");
+        String[] split = VanillaEditConfig.deleteAllRecipe.replace("[", "").replace("]", "").split(",");
         object.entrySet().removeIf(entry ->
                 dove_home_mod$remove(entry, split));
     }

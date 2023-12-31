@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "${modid}",
+  "id": "dovecore",
   "version": "${version}",
 
-  "name": "baka4n lib",
+  "name": "dove core",
   "description": "",
   "authors": [
     "baka4n",
@@ -11,7 +11,7 @@
   ],
   "contact": {},
 
-  "license": "${license_type}",
+  "license": "MIT",
   "icon": "icon.png",
 
   "environment": "*",
