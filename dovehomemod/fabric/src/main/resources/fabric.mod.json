@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "${modid}",
+  "id": "dovehomemod",
   "version": "${version}",
-  "name": "${display_name}",
+  "name": "dove home mod",
   "description": "",
   "authors": [
     "baka4n",
     "dove home mod team"
   ],
   "contact": {},
-  "license": "${license_type}",
+  "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {

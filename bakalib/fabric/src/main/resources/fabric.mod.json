@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "${modid}",
+  "id": "bakalib",
   "version": "${version}",
 
   "name": "baka4n lib",
@@ -11,7 +11,7 @@
   ],
   "contact": {},
 
-  "license": "${license_type}",
+  "license": "MIT",
   "icon": "icon.png",
 
   "environment": "*",
@@ -24,8 +24,8 @@
     ]
   },
   "mixins": [
-    "${modid}.mixins.json",
-    "${modid}-common.mixins.json"
+    "bakalib.mixins.json",
+    "bakalib-common.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.2",
