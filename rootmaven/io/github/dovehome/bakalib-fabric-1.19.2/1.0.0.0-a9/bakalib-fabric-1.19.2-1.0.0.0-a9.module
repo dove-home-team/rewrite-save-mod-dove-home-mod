@@ -1,0 +1,119 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.dovehome",
+    "module": "bakalib-fabric-1.19.2",
+    "version": "1.0.0.0-a9",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.77.0+1.19.2"
+          }
+        },
+        {
+          "group": "dev.architectury",
+          "module": "architectury-fabric",
+          "version": {
+            "requires": "6.5.85"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bakalib-fabric-1.19.2-1.0.0.0-a9.jar",
+          "url": "bakalib-fabric-1.19.2-1.0.0.0-a9.jar",
+          "size": 8958,
+          "sha512": "5d43f60e7ac97b89b311c5d1c1f070386eb4aa1c2156558540ba06168362690aef515cf90df2576b70bb062bcd874d1d87d6f883bcfc9f8ab6d77ef4c1f84d9f",
+          "sha256": "670f11888ed388fd65e55891ccc1efc9fae10c7e5d5b48c313c1ba9fa354ca3c",
+          "sha1": "268504b6b07606e29a20f043c9fc43aeef7cac7c",
+          "md5": "e39699962811b00ceb4e83d92b8cb5b4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.77.0+1.19.2"
+          }
+        },
+        {
+          "group": "dev.architectury",
+          "module": "architectury-fabric",
+          "version": {
+            "requires": "6.5.85"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.15.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bakalib-fabric-1.19.2-1.0.0.0-a9.jar",
+          "url": "bakalib-fabric-1.19.2-1.0.0.0-a9.jar",
+          "size": 8958,
+          "sha512": "5d43f60e7ac97b89b311c5d1c1f070386eb4aa1c2156558540ba06168362690aef515cf90df2576b70bb062bcd874d1d87d6f883bcfc9f8ab6d77ef4c1f84d9f",
+          "sha256": "670f11888ed388fd65e55891ccc1efc9fae10c7e5d5b48c313c1ba9fa354ca3c",
+          "sha1": "268504b6b07606e29a20f043c9fc43aeef7cac7c",
+          "md5": "e39699962811b00ceb4e83d92b8cb5b4"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bakalib-fabric-1.19.2-1.0.0.0-a9-sources.jar",
+          "url": "bakalib-fabric-1.19.2-1.0.0.0-a9-sources.jar",
+          "size": 7027,
+          "sha512": "4ea309950bf7319b7e3cc3ab5714cb1d89812ffbb29a16986f6e84248e259182f09b88a602abee11895c0f02fdd84b936b32be96030bd1d4e20baa66b116e823",
+          "sha256": "86c5c5360c521cd2833fbc6704c3dd894089e2f27fc83300e043ec38ccb15f6d",
+          "sha1": "7f35f787e440167629bbad1cd2566c52f4c069b3",
+          "md5": "aa322995cc65926612f17eac65f23dc2"
+        }
+      ]
+    }
+  ]
+}

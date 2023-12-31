@@ -20,6 +20,9 @@
     ],
     "modmenu": [
       "io.github.dovehome.dovehomemod.fabric.config.DoveConfigFabric"
+    ],
+    "client": [
+      "io.github.dovehome.dovehomemod.fabric.DovehomemodClientFabric"
     ]
   },
   "mixins": [

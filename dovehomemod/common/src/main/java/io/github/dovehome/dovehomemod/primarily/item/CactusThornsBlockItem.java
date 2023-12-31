@@ -29,7 +29,6 @@ public class CactusThornsBlockItem extends BlockItem {
 
     public static final MutableComponent bloody = Component.translatable("cactus.bloody").setStyle(Style.EMPTY.withColor(ChatFormatting.GOLD));
     public static final MutableComponent bloodCount = Component.translatable("blood.count");
-    public static final MutableComponent empty = Component.empty();
     public static final Random ran = new Random();
 
     public CactusThornsBlockItem(CreativeModeTab tab) {
@@ -44,7 +43,7 @@ public class CactusThornsBlockItem extends BlockItem {
         super.appendHoverText(stack, level, tooltipComponents, isAdvanced);
         CompoundTag blockEntityData = getBlockEntityData(stack);
         if (blockEntityData != null) {
-            tooltipComponents.add(empty.append(bloodCount).append(String.valueOf(blockEntityData.getInt("blood_count"))));
+            tooltipComponents.add(Component.empty().append(bloodCount).append(String.valueOf(blockEntityData.getInt("blood_count"))));
         }
 
     }
@@ -81,10 +80,10 @@ public class CactusThornsBlockItem extends BlockItem {
         CompoundTag blockEntityData = getBlockEntityData(stack);
         if (blockEntityData != null) {
             if (blockEntityData.getInt("blood_count") >= 20) {
-                empty.append(bloody);
+                Component.empty().append(bloody);
             }
         }
-        return empty.append(Component.translatable(getDescriptionId()));
+        return Component.empty().append(Component.translatable(getDescriptionId()));
     }
 
     public void tagEdit(@NotNull ItemStack stack, Player player) {

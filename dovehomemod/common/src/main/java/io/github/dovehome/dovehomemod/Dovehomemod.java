@@ -6,7 +6,6 @@ import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
-import io.github.dovehome.dovehomemod.config.SettingsConfig;
 import io.github.dovehome.dovehomemod.registry.ModBlockEntities;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModCreativeTabs;
@@ -17,7 +16,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import org.jetbrains.annotations.Nullable;
 
 public class Dovehomemod
 {
@@ -33,16 +31,11 @@ public class Dovehomemod
 
 	public static final Configurator configs = new Configurator();
 
-
-
 	public static void preInit() {
 		configs.registerConfig(DoveConfig.class);
 	}
 
 	public static void init() {
-		ClientLifecycleEvent.CLIENT_SETUP.register(instance -> {
-			ObjFabricOnly.client();
-		});
 		ModCreativeTabs.init();
 		for (ModBlockEntities value : ModBlockEntities.values()) {
 			value.register(blockEntities);
