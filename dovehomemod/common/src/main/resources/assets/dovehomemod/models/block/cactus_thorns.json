@@ -1,0 +1,8 @@
+{
+	"loader": "forge:obj",
+	"model": "dovehomemod:models/block/cactus_thorns.obj",
+	"flip-v": true,
+	"textures": {
+		"particle": "dovehomemod:block/cactus_thorns"
+	}
+}

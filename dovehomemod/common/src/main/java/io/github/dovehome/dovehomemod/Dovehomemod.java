@@ -6,6 +6,7 @@ import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
 import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
+import io.github.dovehome.dovehomemod.event.CommonEvents;
 import io.github.dovehome.dovehomemod.registry.ModBlockEntities;
 import io.github.dovehome.dovehomemod.registry.ModBlocks;
 import io.github.dovehome.dovehomemod.registry.ModCreativeTabs;
@@ -49,6 +50,7 @@ public class Dovehomemod
 			value.register(items);
 		}
 		items.register();
+		CommonEvents.register();
 	}
 
 	public static ConfigScreen registerConfig(Screen parent) {

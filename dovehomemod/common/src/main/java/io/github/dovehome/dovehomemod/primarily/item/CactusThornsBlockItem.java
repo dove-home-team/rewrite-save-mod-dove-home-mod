@@ -78,12 +78,13 @@ public class CactusThornsBlockItem extends BlockItem {
     public @NotNull Component getName(@NotNull ItemStack stack) {
 
         CompoundTag blockEntityData = getBlockEntityData(stack);
+        MutableComponent empty = Component.empty();
         if (blockEntityData != null) {
             if (blockEntityData.getInt("blood_count") >= 20) {
-                Component.empty().append(bloody);
+                empty.append(bloody);
             }
         }
-        return Component.empty().append(Component.translatable(getDescriptionId()));
+        return empty.append(Component.translatable(getDescriptionId()));
     }
 
     public void tagEdit(@NotNull ItemStack stack, Player player) {

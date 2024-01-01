@@ -139,6 +139,12 @@ for (final def name in names ) {
 
         }
 
+        sourceSets {
+            main {
+                resources.srcDirs += rootProject.file("$name/common/src/main/fabric")
+            }
+        }
+
         architectury {
             platformSetupLoomIde()
             fabric()
@@ -256,6 +262,7 @@ for (final def name in names ) {
         sourceSets {
             main {
                 java.srcDirs += rootProject.file("$name/common/src/main/datagen")
+                resources.srcDirs += rootProject.file("$name/common/src/main/forge")
             }
         }
 
