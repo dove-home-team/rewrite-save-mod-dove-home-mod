@@ -15,6 +15,7 @@ public class DovehomemodDatagen {
     @SubscribeEvent
     public static void datagen(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
+        generator.addProvider(event.includeServer(), new DoveRecipeProvider(generator));
         generator.addProvider(event.includeClient(), new DoveLangProvider(generator));
         generator.addProvider(event.includeClient(), new DoveLangProvider(generator, "en_us") {
             @Override
