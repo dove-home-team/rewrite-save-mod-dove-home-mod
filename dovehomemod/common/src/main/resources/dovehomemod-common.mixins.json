@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "NoInfiniteWater",
-    "RemoveAllRecipe"
+    "RemoveAllRecipe",
+    "TiersMixin"
   ],
   "injectors": {
     "defaultRequire": 1

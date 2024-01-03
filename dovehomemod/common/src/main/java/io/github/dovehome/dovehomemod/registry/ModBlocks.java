@@ -18,6 +18,8 @@ import java.util.function.Supplier;
 
 public enum ModBlocks implements RegistryT<Block> {
     cactus_thorns(CactusThornsBlock::new, Material.CACTUS),
+    rare_element_block(Block::new, Material.STONE),
+    rare_and_rare_element_block(Block::new, Material.STONE),
     ;
     private final Supplier<Block> block;
     private RegistrySupplier<Block> registryBlock;
