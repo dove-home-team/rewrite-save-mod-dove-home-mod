@@ -3,4 +3,5 @@ dependencies {
     modApi("com.teamresourceful.resourcefulconfig:resourcefulconfig-common-${minecraft_version}:${resourceful_config_version}")
     implementation(include('de.javagl:obj:0.4.0'))
     modImplementation("dev.latvian.mods:kubejs-fabric:${kubejs_version}")
+    modCompileOnly("software.bernie.geckolib:geckolib-fabric-1.19:${geckolib_version}")
 }
