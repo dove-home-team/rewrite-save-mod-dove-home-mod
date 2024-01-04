@@ -23,7 +23,7 @@ public class TiersMixin {
 
     //添加挖掘等级设定
     static {
-        dovehomemod$add("ULTRA", Integer.MAX_VALUE, Integer.MAX_VALUE, 1000, 10.0F, 30, () -> Ingredient.of(ModItems.ultra_zone_ingot.get()));
+        dovehomemod$add("ULTRA", 21474/*max / 1000*/, Integer.MAX_VALUE, 1000, 10.0F, 30, () -> Ingredient.of(ModItems.ultra_zone_ingot.get()));
     }
 
     @Unique

@@ -1,7 +1,7 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
     id "dev.architectury.loom" version "1.4-SNAPSHOT" apply false
-    id "com.github.johnrengelman.shadow" version "7.1.2" apply false
+    id "com.github.johnrengelman.shadow" version "8.1.1" apply false
 }
 
 architectury {
@@ -40,6 +40,12 @@ allprojects {
 
             name = "Resourceful Bees Maven"
             url = "https://nexus.resourcefulbees.com/repository/maven-public/"
+        }
+        maven {
+            url = "https://maven.saps.dev/minecraft"
+            content {
+                includeGroup "dev.latvian.mods"
+            }
         }
 
     }

@@ -1,4 +1,5 @@
 dependencies {
     modImplementation(include("io.github.dovehome:bakalib-forge-${minecraft_version}:${last_bakalib_version}"))
     modApi("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-${minecraft_version}:${resourceful_config_version}")
+    modImplementation("dev.latvian.mods:kubejs-forge:${kubejs_version}")
 }
