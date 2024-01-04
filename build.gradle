@@ -6,6 +6,7 @@ plugins {
 
 architectury {
     minecraft = rootProject.minecraft_version
+
 }
 
 allprojects {
@@ -88,7 +89,7 @@ def names = [
 
 for (final def name in names ) {
     project(":$name-common") {
-
+        project.buildDir = "/build/common"
         archivesBaseName = "$name"
         version = getProperty("${name}_version")
         loom {
@@ -136,15 +137,20 @@ for (final def name in names ) {
         }
     }
     project(":$name-fabric") {
+        project.buildDir = "../common/build/fabric"
         apply plugin: "com.github.johnrengelman.shadow"
 
         archivesBaseName = "$name"
         version = getProperty("${name}_version")
 
+
         loom {
             def path = project(":$name-common").loom.accessWidenerPath
             if (path != null) {
                 accessWidenerPath = path
+            }
+            for (final def config in runConfigs) {
+                config.runDir("../common/run/fabric")
             }
 
         }
@@ -231,7 +237,7 @@ for (final def name in names ) {
         publishing {
             publications {
                 mavenFabric(MavenPublication) {
-                    artifactId =  project.name + "-" + minecraft_version
+                    artifactId = project.name + "-" + minecraft_version
                     from components.java
                 }
             }
@@ -246,6 +252,7 @@ for (final def name in names ) {
 
     }
     project(":$name-forge") {
+        project.buildDir = "../common/build/forge"
         apply plugin: "com.github.johnrengelman.shadow"
 
         archivesBaseName = "$name"
@@ -262,6 +269,7 @@ for (final def name in names ) {
                 accessWidenerPath = path
             }
             forge {
+
                 mixinConfig "${name}.mixins.json", "${name}-common.mixins.json"
                 if (path != null) {
                     convertAccessWideners.set(true)
@@ -272,6 +280,9 @@ for (final def name in names ) {
                         programArgs("--all", "--mod", "${name}")
                         programArgs("--output", project(":$name-common").file("src/main/generated/resources").absolutePath)
                     }
+                }
+                for (final def config in runConfigs) {
+                    config.runDir("../common/run/fabric")
                 }
 
             }
