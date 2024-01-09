@@ -3,26 +3,21 @@ pluginManagement {
         maven { url "https://maven.fabricmc.net/" }
         maven { url "https://maven.architectury.dev/" }
         maven { url "https://maven.minecraftforge.net/" }
+        mavenLocal()
+        maven { url "https://github.com/XenFork/Architectury-compatibility-layer/rootmaven" }
         gradlePluginPortal()
     }
 }
 
+plugins {
+    id "acl" version "$acl_version"
+}
 
-include("bakalib/common")
-include("bakalib/fabric")
-include("bakalib/forge")
-include("dovehomemod/common")
-include("dovehomemod/fabric")
-include("dovehomemod/forge")
-include("dovecore/common")
-include("dovecore/fabric")
-include("dovecore/forge")
-project(":bakalib/common").name = "bakalib-common"
-project(":bakalib/fabric").name = "bakalib-fabric"
-project(":bakalib/forge").name = "bakalib-forge"
-project(":dovehomemod/common").name = "dovehomemod-common"
-project(":dovehomemod/fabric").name = "dovehomemod-fabric"
-project(":dovehomemod/forge").name = "dovehomemod-forge"
-project(":dovecore/common").name = "dovecore-common"
-project(":dovecore/fabric").name = "dovecore-fabric"
-project(":dovecore/forge").name = "dovecore-forge"
+acl {
+    srg = "2022.11.27"
+    mcversion = "1.19.2"
+    group = "io.github.dovehome"
+    flv = "0.15.3"
+    project$name=archives_base_name
+}
+

@@ -3,7 +3,6 @@ package io.github.dovehome.dovehomemod;
 import com.teamresourceful.resourcefulconfig.client.ConfigScreen;
 import com.teamresourceful.resourcefulconfig.common.config.Configurator;
 import com.teamresourceful.resourcefulconfig.common.config.ResourcefulConfig;
-import dev.architectury.event.events.client.ClientLifecycleEvent;
 import dev.architectury.registry.registries.DeferredRegister;
 import io.github.dovehome.dovehomemod.config.DoveConfig;
 import io.github.dovehome.dovehomemod.event.CommonEvents;

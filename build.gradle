@@ -1,28 +1,14 @@
 plugins {
-    id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.4-SNAPSHOT" apply false
-    id "com.github.johnrengelman.shadow" version "8.1.1" apply false
+    id "acl" version "$acl_version"
+    id 'java'
 }
 
-architectury {
-    minecraft = rootProject.minecraft_version
-
-}
+rootProject.buildDir = ".gradle/build/"
 
 allprojects {
-    apply plugin: "java"
-    apply plugin: "architectury-plugin"
-    apply plugin: "maven-publish"
-
-    archivesBaseName = rootProject.archives_base_name
-    version = rootProject.mod_version
-    group = rootProject.maven_group
 
     repositories {
-        maven {
-            name = 'ParchmentMC'
-            url = 'https://maven.parchmentmc.org'
-        }
+
         maven {
             url = rootProject.file("rootmaven")
         }
@@ -65,31 +51,12 @@ allprojects {
     }
 }
 
-subprojects {
-    apply plugin: "dev.architectury.loom"
-    loom {
-        silentMojangMappingsLicense()
-    }
 
-    dependencies {
-        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
-        // The following line declares the mojmap mappings, you may use other mappings as well
-        mappings loom.layered() {
-            officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${rootProject.pachment_version}@zip")
-        }
-    }
-}
 
-def names = [
-        "bakalib"
-        , "dovehomemod"
-        , "dovecore"
-]
-
-for (final def name in names ) {
+String property = getProperty("sts.projects")
+for (final def name in property.split(",") ) {
     project(":$name-common") {
-        project.buildDir = "/build/common"
+//        project.buildDir = "/build/common"
         archivesBaseName = "$name"
         version = getProperty("${name}_version")
         loom {
@@ -137,7 +104,7 @@ for (final def name in names ) {
         }
     }
     project(":$name-fabric") {
-        project.buildDir = "../common/build/fabric"
+//        project.buildDir = "../common/build/fabric"
         apply plugin: "com.github.johnrengelman.shadow"
 
         archivesBaseName = "$name"
@@ -252,7 +219,7 @@ for (final def name in names ) {
 
     }
     project(":$name-forge") {
-        project.buildDir = "../common/build/forge"
+//        project.buildDir = "../common/build/forge"
         apply plugin: "com.github.johnrengelman.shadow"
 
         archivesBaseName = "$name"
@@ -390,6 +357,7 @@ for (final def name in names ) {
             project("$name-fabric").tasks.getByName("publish"),
             project("$name-forge").tasks.getByName("publish")
     ],
-     group: "publish") {}
+            group: "publish") {}
 
 }
+
