@@ -12,6 +12,7 @@ allprojects {
         maven {
             url = rootProject.file("rootmaven")
         }
+		maven { url "https://github.com/XenFork/Architectury-compatibility-layer/rootmaven/" }
         maven { url "https://maven.shedaniel.me/" }
         maven {
             url = 'https://www.cursemaven.com'
@@ -158,8 +159,6 @@ for (final def name in property.split(",") ) {
             shadowCommon(project(path: ":$name-common", configuration: "transformProductionFabric")) { transitive false }
         }
 
-        apply from: rootProject.file("$name/common/fabric.gradle")
-
         processResources {
             inputs.property "version", project.version
             inputs.property "modid", name
@@ -289,8 +288,6 @@ for (final def name in property.split(",") ) {
             common(project(path: ":$name-common", configuration: "namedElements")) { transitive false }
             shadowCommon(project(path: ":$name-common", configuration: "transformProductionForge")) { transitive = false }
         }
-
-        apply from: rootProject.file("$name/common/forge.gradle")
 
         processResources {
             inputs.property "version", project.version
