@@ -20,6 +20,7 @@ acl {
     flv = "0.15.3"
     project$name=archives_base_name
     architectury$version="6.5.85"
-    fapi="0.77.0"
+    fapi="0.77.0+1.19.2"
+    fgv="1.19.2-43.3.5"
 }
 
