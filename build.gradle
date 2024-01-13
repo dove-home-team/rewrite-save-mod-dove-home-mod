@@ -76,9 +76,7 @@ for (final def name in property.split(",") ) {
             }
         }
 
-        architectury {
-            common("fabric", "forge")
-        }
+
 
         publishing {
             publications {
