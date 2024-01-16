@@ -67,17 +67,6 @@ for (final def name in property.split(",") ) {
             }
         }
 
-        sourceSets {
-            main {
-                resources {
-                    srcDirs += file("src/main/generated/resources").absolutePath
-                    exclude ".cache"
-                }
-            }
-        }
-
-
-
         publishing {
             publications {
                 mavenCommon(MavenPublication) {
