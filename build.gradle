@@ -60,12 +60,6 @@ for (final def name in property.split(",") ) {
 //        project.buildDir = "/build/common"
         archivesBaseName = "$name"
         version = getProperty("${name}_version")
-        loom {
-            def path = file("src/main/resources/${name}.accesswidener")
-            if (path.exists()) {
-                accessWidenerPath = path
-            }
-        }
 
         publishing {
             publications {
