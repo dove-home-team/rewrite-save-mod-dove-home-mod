@@ -5,3 +5,4 @@ dependencies {
     modImplementation("dev.latvian.mods:kubejs-fabric:${kubejs_version}")
     modCompileOnly("software.bernie.geckolib:geckolib-fabric-1.19:${geckolib_version}")
 }
+
