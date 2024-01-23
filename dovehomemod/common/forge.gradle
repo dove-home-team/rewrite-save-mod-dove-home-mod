@@ -1,6 +1,6 @@
 dependencies {
-    modImplementation(include("io.github.dovehome:bakalib-forge-${minecraft_version}:${last_bakalib_version}"))
-    modApi("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-${minecraft_version}:${resourceful_config_version}")
+    modImplementation(include("io.github.dovehome:bakalib-forge-${acl.mcversion}:${last_bakalib_version}"))
+    modApi("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-${acl.mcversion}:${resourceful_config_version}")
     modImplementation("dev.latvian.mods:kubejs-forge:${kubejs_version}")
     modImplementation(include("software.bernie.geckolib:geckolib-forge-1.19:${geckolib_version}"))
 }
