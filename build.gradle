@@ -1,5 +1,5 @@
 plugins {
-    id "acl" version "$acl_version"
+    alias(libs.plugins.acl.plugin)
     id 'java'
 }
 

@@ -1,0 +1,20 @@
+[versions]
+acl="1.2.1"
+bakalib="1.0.0.0-a10"
+resourceful-config="1.0.20"
+kubejs="1902.6.2-build.45"
+
+[plugins]
+acl-plugin= { id="io.github.xenfork.acl", version.ref="acl" }
+
+[libraries]
+bakalib-common={ group="io.github.dovehome", name="bakalib-common-1.19.2", version.ref="bakalib" }
+bakalib-fabric={ group="io.github.dovehome", name="bakalib-fabric-1.19.2", version.ref="bakalib" }
+bakalib-forge={ group="io.github.dovehome", name="bakalib-forge-1.19.2", version.ref="bakalib" }
+resourceful-config-common={ group="com.teamresourceful.resourcefulconfig", name="resourcefulconfig-common-1.19.2", version.ref="resourceful-config" }
+resourceful-config-fabric={ group="com.teamresourceful.resourcefulconfig", name="resourcefulconfig-fabric-1.19.2", version.ref="resourceful-config" }
+resourceful-config-forge={ group="com.teamresourceful.resourcefulconfig", name="resourcefulconfig-forge-1.19.2", version.ref="resourceful-config" }
+kubejs-fabric={ group="dev.latvian.mods", name="kubejs-fabric", version.ref="kubejs" }
+kubejs-forge={ group="dev.latvian.mods", name="kubejs-forge", version.ref="kubejs" }
+[bundles]
+
