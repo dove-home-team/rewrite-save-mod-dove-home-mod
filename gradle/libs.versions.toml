@@ -1,12 +1,19 @@
 [versions]
-acl="1.2.1"
+acl="1.2.2"
 bakalib="1.0.0.0-a10"
 resourceful-config="1.0.20"
 kubejs="1902.6.2-build.45"
+modmenu="4.1.2"
+geckolib="3.1.40"
+create="0.5.1.f-46"
+create-fabric="0.5.1-f-build.1221+mc1.19.2"
+architectury-plugin="3.4-SNAPSHOT"
+architectury-loom="1.5-SNAPSHOT"
 
 [plugins]
-acl-plugin= { id="io.github.xenfork.acl", version.ref="acl" }
-
+acl-plugin={ id="io.github.xenfork.acl", version.ref="acl" }
+architectury-plugin={ id="architectury-plugin", version.ref="architectury-plugin" }
+architectury-loom={ id="dev.architectury.loom", version.ref="architectury-loom" }
 [libraries]
 bakalib-common={ group="io.github.dovehome", name="bakalib-common-1.19.2", version.ref="bakalib" }
 bakalib-fabric={ group="io.github.dovehome", name="bakalib-fabric-1.19.2", version.ref="bakalib" }
@@ -16,5 +23,10 @@ resourceful-config-fabric={ group="com.teamresourceful.resourcefulconfig", name=
 resourceful-config-forge={ group="com.teamresourceful.resourcefulconfig", name="resourcefulconfig-forge-1.19.2", version.ref="resourceful-config" }
 kubejs-fabric={ group="dev.latvian.mods", name="kubejs-fabric", version.ref="kubejs" }
 kubejs-forge={ group="dev.latvian.mods", name="kubejs-forge", version.ref="kubejs" }
+modmenu={ group="com.terraformersmc", name="modmenu", version.ref="modmenu" }
+geckolib-fabric={ group="software.bernie.geckolib", name="geckolib-fabric-1.19", version.ref="geckolib" }
+geckolib-forge={ group="software.bernie.geckolib", name="geckolib-forge-1.19", version.ref="geckolib" }
+create-forge={ group="com.simibubi.create", name="create-1.19.2", version.ref="create" }
+create-fabric={ group="com.simibubi.create", name="create-fabric-1.19.2", version.ref="create-fabric" }
 [bundles]
 

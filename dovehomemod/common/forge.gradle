@@ -2,5 +2,8 @@ dependencies {
     modImplementation(include(libs.bakalib.forge.get()))
     modApi(libs.resourceful.config.forge)
     modImplementation(libs.kubejs.forge)
-    modImplementation(include("software.bernie.geckolib:geckolib-forge-1.19:${geckolib_version}"))
+    modImplementation(include(libs.geckolib.forge.get()))
+    modImplementation(libs.create.forge) {
+        exclude group: "org.squiddev"
+    }
 }

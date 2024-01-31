@@ -3,7 +3,8 @@ dependencies {
     modImplementation(include(libs.bakalib.fabric.get()))
     modApi(libs.resourceful.config.fabric)
     modImplementation(libs.kubejs.fabric)
-    modApi("com.terraformersmc:modmenu:${modmenu_version}")
+    modApi(libs.modmenu)
     modImplementation(include(fileTree(dir: "../../libs/fabric", includes: ["*.jar"])))
-    modImplementation(include("software.bernie.geckolib:geckolib-fabric-1.19:${geckolib_version}"))
+    modImplementation(include(libs.geckolib.fabric.get()))
+    modImplementation(libs.create.fabric)
 }
