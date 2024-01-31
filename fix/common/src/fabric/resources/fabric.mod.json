@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "fix",
+  "version": "${version}",
+  "name": "fix bugs",
+  "description": "",
+  "authors": [
+    "baka4n",
+    "dove home mod team"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.dovehome.fix.fabric.FixFabric"
+    ]
+  },
+  "mixins": [
+    "fix.mixins.json",
+    "fix-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.2",
+    "fabric": ">=0.77.0",
+    "minecraft": ">=1.19.2",
+    "architectury": ">=6.5.85"
+  }
+}
